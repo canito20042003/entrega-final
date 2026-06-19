@@ -3,17 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Tech</title>
+  <title>TechStore | Cámaras Inteligentes Tapo y Accesorios</title>
+  <meta name="description" content="Tienda online de cámaras inteligentes Tapo, accesorios de seguridad y memorias micro SD para cuidar tu hogar con tecnología simple y confiable.">
+  <meta name="keywords" content="cámaras inteligentes, Tapo C100, Tapo C200, Tapo C210, micro SD, seguridad para el hogar, tienda tech">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="TechStore">
+  <meta name="theme-color" content="#07111f">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="TechStore">
+  <meta property="og:title" content="TechStore | Cámaras Inteligentes Tapo y Accesorios">
+  <meta property="og:description" content="Cámaras inteligentes Tapo, accesorios de seguridad y memorias micro SD para cuidar tu hogar.">
+  <meta property="og:image" content="imagenes/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TechStore | Cámaras Inteligentes Tapo y Accesorios">
+  <meta name="twitter:description" content="Cámaras inteligentes Tapo, accesorios de seguridad y memorias micro SD para cuidar tu hogar.">
+  <meta name="twitter:image" content="imagenes/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TechStore",
+      "description": "Tienda online de cámaras inteligentes Tapo, accesorios de seguridad y memorias micro SD.",
+      "inLanguage": "es-AR",
+      "publisher": {
+        "@type": "Organization",
+        "name": "TechStore"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Productos destacados TechStore",
+      "description": "Cámaras inteligentes Tapo y accesorios para seguridad del hogar.",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Micro SD 64GB",
+            "category": "Accesorio",
+            "description": "Memoria micro SD de 64GB para guardar grabaciones de cámaras de seguridad.",
+            "image": "imagenes/microsd.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "25000",
+              "priceCurrency": "ARS",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "TAPO C100",
+            "category": "Cámara",
+            "description": "Cámara compacta con visión clara para monitorear espacios pequeños.",
+            "offers": {
+              "@type": "Offer",
+              "price": "85000",
+              "priceCurrency": "ARS",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "TAPO C200",
+            "category": "Cámara",
+            "description": "Cámara con control remoto y seguimiento de movimiento para mayor tranquilidad.",
+            "image": "imagenes/tapoc200.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "95000",
+              "priceCurrency": "ARS",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "TAPO C210",
+            "category": "Cámara",
+            "description": "Cámara con video nítido y funciones inteligentes para cuidar el hogar.",
+            "image": "imagenes/tapoc210.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "120000",
+              "priceCurrency": "ARS",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
   <header class="site-header">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegación principal">
       <a href="#" class="brand">
-        <img class="imglogo" src="logo.png" alt="logo de la empresa">
+        <img class="imglogo" src="imagenes/logo.png" alt="TechStore logo">
         <span>TechStore</span>
       </a>
 
@@ -36,9 +143,9 @@
     <section class="hero" id="inicio">
       <div class="hero-content">
         <p class="eyebrow">Cámaras inteligentes y accesorios</p>
-        <h1>Seguridad moderna para tu hogar</h1>
+        <h1>Cámaras inteligentes Tapo y accesorios para tu hogar</h1>
         <p class="hero-text">
-          Descubrí productos simples, confiables y diseñados para cuidar lo que más importa.
+          Comprá cámaras de seguridad, memorias micro SD y accesorios confiables para monitorear tu casa desde el celular.
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#productos">Ver productos</a>
@@ -48,22 +155,112 @@
     </section>
   </header>
 
-  <main>
-    <section class="section products" id="productos">
+  <main id="contenido-principal" tabindex="-1">
+    <section class="section products" id="productos" aria-labelledby="productos-title">
       <div class="section-heading">
         <p>Productos destacados</p>
-        <h2>Elegí la solución ideal</h2>
+        <h2 id="productos-title">Cámaras Tapo y accesorios de seguridad</h2>
       </div>
 
       <div id="product-list" class="product-grid" aria-live="polite">
-        <div class="product-loading">Cargando productos desde la API...</div>
+        <article class="product-card" itemscope itemtype="https://schema.org/Product">
+          <meta itemprop="productID" content="1">
+          <div class="product-media">
+            <img src="imagenes/microsd.png" alt="memoria micro SD de 64GB" loading="lazy" itemprop="image">
+          </div>
+          <div class="product-body">
+            <span class="badge" itemprop="category">Accesorio</span>
+            <h3 itemprop="name">Micro SD 64GB</h3>
+            <p itemprop="description">Memoria micro SD de 64GB para guardar tus grabaciones con rapidez y seguridad.</p>
+            <strong class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="ARS">
+              <meta itemprop="price" content="25000">
+              <meta itemprop="availability" content="https://schema.org/InStock">
+              $25.000
+            </strong>
+            <div class="product-actions">
+              <button class="button button-primary" type="button" data-add-to-cart="1">
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" itemscope itemtype="https://schema.org/Product">
+          <meta itemprop="productID" content="2">
+          <div class="product-media">
+            <span class="placeholder-icon">C100</span>
+          </div>
+          <div class="product-body">
+            <span class="badge" itemprop="category">Cámara</span>
+            <h3 itemprop="name">TAPO C100</h3>
+            <p itemprop="description">Cámara compacta con visión clara para monitorear espacios pequeños.</p>
+            <strong class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="ARS">
+              <meta itemprop="price" content="85000">
+              <meta itemprop="availability" content="https://schema.org/InStock">
+              $85.000
+            </strong>
+            <div class="product-actions">
+              <button class="button button-primary" type="button" data-add-to-cart="2">
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" itemscope itemtype="https://schema.org/Product">
+          <meta itemprop="productID" content="3">
+          <div class="product-media">
+            <img src="imagenes/tapoc200.png" alt="cámara inteligente TAPO C200" loading="lazy" itemprop="image">
+          </div>
+          <div class="product-body">
+            <span class="badge" itemprop="category">Cámara</span>
+            <h3 itemprop="name">TAPO C200</h3>
+            <p itemprop="description">Control remoto y seguimiento de movimiento para mayor tranquilidad.</p>
+            <strong class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="ARS">
+              <meta itemprop="price" content="95000">
+              <meta itemprop="availability" content="https://schema.org/InStock">
+              $95.000
+            </strong>
+            <div class="product-actions">
+              <button class="button button-primary" type="button" data-add-to-cart="3">
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" itemscope itemtype="https://schema.org/Product">
+          <meta itemprop="productID" content="4">
+          <div class="product-media">
+            <img src="imagenes/tapoc210.png" alt="cámara inteligente TAPO C210" loading="lazy" itemprop="image">
+          </div>
+          <div class="product-body">
+            <span class="badge" itemprop="category">Cámara</span>
+            <h3 itemprop="name">TAPO C210</h3>
+            <p itemprop="description">Video nítido y funciones inteligentes para cuidar tu hogar todos los días.</p>
+            <strong class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="ARS">
+              <meta itemprop="price" content="120000">
+              <meta itemprop="availability" content="https://schema.org/InStock">
+              $120.000
+            </strong>
+            <div class="product-actions">
+              <button class="button button-primary" type="button" data-add-to-cart="4">
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="demo" id="demo">
+    <section class="demo" id="demo" aria-labelledby="demo-title">
       <div class="demo-content">
         <p>Demo del producto</p>
-        <h2>Mirá cómo funciona</h2>
+        <h2 id="demo-title">Mirá cómo funcionan las cámaras inteligentes Tapo</h2>
         <video controls poster="">
           <source src="video.mp4" type="video/mp4">
           Tu navegador no soporta la reproducción de video.
@@ -71,10 +268,10 @@
       </div>
     </section>
 
-    <section class="section reviews" id="resenas">
+    <section class="section reviews" id="resenas" aria-labelledby="resenas-title">
       <div class="section-heading">
         <p>Testimonios</p>
-        <h2>Lo que dicen nuestros clientes</h2>
+        <h2 id="resenas-title">Reseñas de clientes sobre seguridad para el hogar</h2>
       </div>
 
       <div class="review-grid">
@@ -98,13 +295,13 @@
       </div>
     </section>
 
-    <section class="section contact" id="contacto">
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
       <div class="contact-card">
         <div>
           <p>Contacto</p>
-          <h2>¿Tenés alguna consulta?</h2>
+          <h2 id="contacto-title">Consultas sobre cámaras Tapo y accesorios</h2>
           <p class="contact-text">
-            Escribinos y te ayudamos a elegir el producto que mejor se adapta a tus necesidades.
+            Escribinos y te ayudamos a elegir cámaras de seguridad, memorias micro SD y accesorios para tu hogar.
           </p>
         </div>
 

@@ -47,7 +47,7 @@ function formatMoney(value) {
 
 function loadCart() {
   try {
-    const savedCart = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    const savedCart = JSON.parse(sessionStorage.getItem(STORAGE_KEY));
     return Array.isArray(savedCart) ? savedCart : [];
   } catch (error) {
     return [];
@@ -55,7 +55,7 @@ function loadCart() {
 }
 
 function saveCart() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state.cart));
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state.cart));
 }
 
 function getCartQuantity() {
@@ -77,18 +77,24 @@ function renderProducts(products) {
   }
 
   elements.productList.innerHTML = products.map((product) => {
-    const image = product.image
-      ? `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}" loading="lazy">`
-      : `<span class="placeholder-icon">${escapeHtml(product.shortName)}</span>`;
-
     return `
-      <article class="product-card" data-product-id="${escapeHtml(product.id)}">
-        <div class="product-media">${image}</div>
+      <article class="product-card" data-product-id="${escapeHtml(product.id)}" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="productID" content="${escapeHtml(product.id)}">
+        <div class="product-media">
+          ${product.image
+            ? `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}" loading="lazy" itemprop="image">`
+            : `<span class="placeholder-icon">${escapeHtml(product.shortName)}</span>`}
+        </div>
         <div class="product-body">
-          <span class="badge">${escapeHtml(product.category)}</span>
-          <h3>${escapeHtml(product.name)}</h3>
-          <p>${escapeHtml(product.description)}</p>
-          <strong class="product-price">${formatMoney(product.price)}</strong>
+          <span class="badge" itemprop="category">${escapeHtml(product.category)}</span>
+          <h3 itemprop="name">${escapeHtml(product.name)}</h3>
+          <p itemprop="description">${escapeHtml(product.description)}</p>
+          <strong class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="ARS">
+            <meta itemprop="price" content="${escapeHtml(product.price)}">
+            <meta itemprop="availability" content="https://schema.org/InStock">
+            ${formatMoney(product.price)}
+          </strong>
           <div class="product-actions">
             <button class="button button-primary" type="button" data-add-to-cart="${escapeHtml(product.id)}">
               Agregar al carrito
